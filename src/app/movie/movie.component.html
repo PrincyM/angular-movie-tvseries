@@ -3,8 +3,11 @@
 </p>
 
 <ul *ngIf='movies'>
-  <li *ngFor='let m of movies'>
+  <li *ngFor='let
+   m of movies'>
       id: {{ m.id }}, name: {{ m.title }}, description: {{ m.description}}
   </li>
   
 </ul>
+
+<!-- <a *ngFor='let m of planets' routerLink="/details/{{ m.id }}">{{ m.title }} </a> -->

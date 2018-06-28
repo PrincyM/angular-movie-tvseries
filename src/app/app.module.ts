@@ -4,11 +4,13 @@ import { HttpClientModule } from '@angular/common/http'; // for HTTP request. im
 
 import { AppComponent } from './app.component';
 import { MovieComponent } from './movie/movie.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MovieComponent
+    MovieComponent,
+    MovieDetailsComponent
   ],
   imports: [
     BrowserModule,
