@@ -16,20 +16,20 @@ export class TvshowService {
   }
 
   getTvShow(id: number) : Observable<Tvshow> {
-      return this.http.get<Tvshow>(this.apiUrl + "&")
+      return this.http.get<Tvshow>(this.apiUrl + "&id=" + id);
   }
 
-  getTvShows(genre? : string, title? : string) : Observable<Tvshow> {
+  getTvShows(genre? : string, title? : string) : Observable<Tvshow[]> {
     
     if(genre != '') {
-      return this.http.get<Tvshow>(this.apiUrl + "&genre=" + genre)
+      return this.http.get<Tvshow[]>(this.apiUrl + "&genre=" + genre)
         .pipe(catchError(this.handleError));
     } else if(title != ''){
-      return this.http.get<Tvshow>(this.apiUrl + "&seriesTitle=" + title)
+      return this.http.get<Tvshow[]>(this.apiUrl + "&seriesTitle=" + title)
       .pipe(catchError(this.handleError));
     }
     
-    return this.http.get<Tvshow>(this.apiUrl)
+    return this.http.get<Tvshow[]>(this.apiUrl)
       .pipe(catchError(this.handleError));
   }
 
