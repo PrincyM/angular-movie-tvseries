@@ -10,7 +10,17 @@ import { Movie } from '../movie'; // import Movie model
 })
 export class MovieComponent implements OnInit {
 
+  // define movieSearch
+
+  movieSearch: Movie = new Movie(); 
+
   movies: Movie[];
+
+  // method findMoviesByGenre
+
+  findMovies() : void {
+    this.movieService.getMovies(this.movieSearch).subscribe(data => this.movies = data);
+  }
 
   setMovies(): void {
 
