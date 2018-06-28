@@ -2,7 +2,13 @@
   movie-details works!
 </p>
 
-<div *ngIf='movieDetails'> 
+<ul *ngIf='movieDetails'>
+  <li *ngFor='let m of movieDetails'>{{ m.title }}</li>
+</ul>
+
+<!-- <div *ngIf='movieDetails'> 
   <div>{{ movieDetails.title }}</div>
   <div>{{ movieDetails.description }}</div>
-</div>
+</div> -->
+
+

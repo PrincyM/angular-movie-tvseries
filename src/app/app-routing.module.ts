@@ -4,10 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { TvShowComponent } from './tv-show/tv-show.component';
 import { TvShowDetailComponent } from './tv-show-detail/tv-show-detail.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { MovieComponent } from './movie/movie.component';
 
 const routes = [
   { path: 'tv-shows', component: TvShowComponent },
-  { path: 'tv-show/:id', component: TvShowDetailComponent }
+  { path: 'tv-show/:id', component: TvShowDetailComponent },
+  { path: 'movies', component: MovieComponent},
+  { path: 'movieDetails/:id' , component: MovieDetailsComponent}
 ];
 
 @NgModule({
