@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'; // for HTTP request. importing from angular's HTTP library
-
+import { FormsModule } from '@angular/forms';
 import { MovieComponent } from './movie/movie.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { AppComponent } from './app.component';
@@ -20,7 +20,8 @@ import { TvShowDetailComponent } from './tv-show-detail/tv-show-detail.component
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

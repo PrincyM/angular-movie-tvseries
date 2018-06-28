@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Tvshow } from '../tvshow';
 import { TvshowService } from '../tvshow.service';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-tv-show',
@@ -11,14 +12,18 @@ export class TvShowComponent implements OnInit {
 
   tvShow: Tvshow;
   tvShows: Tvshow[];
+  showSearch: Tvshow = new Tvshow();
+
+  findTvShow() {
+    this.tvShowService.getTvShows(this.showSearch).subscribe(ts => this.tvShows = ts);
+  }
 
   constructor(
     private tvShowService: TvshowService
   ) { }
 
   ngOnInit() {
-    this.tvShowService.getTvShows('','').subscribe(ts => this.tvShows = ts);
-    
+    this.tvShowService.getTvShows().subscribe(ts => this.tvShows = ts);
   }
 
 }
