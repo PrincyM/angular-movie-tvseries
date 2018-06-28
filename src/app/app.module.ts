@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'; // for HTTP request. importing from angular's HTTP library
 import { FormsModule } from '@angular/forms' // import form module here
-
 import { MovieComponent } from './movie/movie.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { AppComponent } from './app.component';

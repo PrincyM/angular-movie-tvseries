@@ -34,7 +34,6 @@ export class MovieComponent implements OnInit {
   ngOnInit() {
 
     this.setMovies();
-    console.log(this.movies);
   }
 
 }
