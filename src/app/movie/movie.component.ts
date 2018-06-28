@@ -16,7 +16,7 @@ export class MovieComponent implements OnInit {
 
   movies: Movie[];
 
-  // method findMoviesByGenre
+  // method findMoviesByTitle
 
   findMovies() : void {
     this.movieService.getMovies(this.movieSearch).subscribe(data => this.movies = data);
