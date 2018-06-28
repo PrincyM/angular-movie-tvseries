@@ -12,7 +12,6 @@ import { TvShowDetailComponent } from './tv-show-detail/tv-show-detail.component
 @NgModule({
   declarations: [
     AppComponent,
-
     MovieComponent,
     MovieDetailsComponent,
     TvShowComponent,

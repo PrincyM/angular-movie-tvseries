@@ -7,7 +7,7 @@ import { TvShowDetailComponent } from './tv-show-detail/tv-show-detail.component
 
 const routes = [
   { path: 'tv-shows', component: TvShowComponent },
-  { path: 'tv-show-detail', component: TvShowDetailComponent }
+  { path: 'tv-show/:id', component: TvShowDetailComponent }
 ];
 
 @NgModule({
