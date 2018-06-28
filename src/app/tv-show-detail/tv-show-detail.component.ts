@@ -23,7 +23,7 @@ export class TvShowDetailComponent implements OnInit {
   ngOnInit() {
 
     this.id = +this.route.snapshot.paramMap.get('id');
-    this.tvShowService.getTvShow(1).subscribe(result => this.tvShow = result);
+    this.tvShowService.getTvShow(this.id).subscribe(result => this.tvShow = result);
     
   }
 
