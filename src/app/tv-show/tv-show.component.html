@@ -1,6 +1,6 @@
 <div>
   <div id="error"></div>
   <ul>
-    <li *ngFor="let ts of tvShows" id="{{ ts.id }}" routerLink="/tv-show/{{ ts.id }}" [class.selected]="ts===tvShow"><a>{{ ts.title }}</a></li>
+    <li *ngFor="let ts of tvShows" id="{{ ts.id }}"><a routerLink="/tv-show/{{ ts.id }}">{{ ts.title }}</a></li>
   </ul>
 </div>
