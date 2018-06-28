@@ -10,7 +10,6 @@ import { Subject } from 'rxjs';
 })
 export class TvShowComponent implements OnInit {
 
-  tvShow: Tvshow;
   tvShows: Tvshow[];
   showSearch: Tvshow = new Tvshow();
 
