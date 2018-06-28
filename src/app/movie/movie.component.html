@@ -1,0 +1,10 @@
+<p>
+  movie works!
+</p>
+
+<ul *ngIf='movies'>
+  <li *ngFor='let m of movies'>
+      id: {{ m.id }}, name: {{ m.title }}, description: {{ m.description}}
+  </li>
+  
+</ul>
