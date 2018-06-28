@@ -32,7 +32,7 @@ export class MovieService {
 
    getMovieById(id): Observable<Movie> { // getMovieById is expecting an array of planets from observable array of planers
 
-   return this.http.get<Movie>(this.apiUrl + id).pipe(catchError(this.handleError));  // enter URL of API endpoint and return the movie array
+   return this.http.get<Movie>(this.apiUrl + "&id=" + id).pipe(catchError(this.handleError));  // enter URL of API endpoint and return the movie array
   //  + '?api_key=n01258381&id='
    }
 
