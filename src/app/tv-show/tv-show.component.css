@@ -1,0 +1,13 @@
+li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+}
+
+form {
+    margin-left: 100px;
+}
+
+.tv-series {
+    margin-top: 2%; 
+}
