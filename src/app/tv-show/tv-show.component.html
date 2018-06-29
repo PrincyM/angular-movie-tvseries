@@ -1,20 +1,24 @@
 <div class="tv-series">
-  <form>
-      <input name="search" [(ngModel)]="showSearch.genre" />
-      <button (click)="findTvShow()">Search</button>
+    <form class="form-inline">
+      <div class="form-group mx-sm-3 mb-2">
+        <input class="form-control" name="search" [(ngModel)]="showSearch.genre" placeholder="Search by genre..">
+      </div>
+      <button (click)="findTvShow()" class="button btn mb-2">Search</button>
     </form>
-  
   <div>
     <div id="error"></div>
+  </div>
+  <div>
+      <a class="back btn mb-2" routerLink="" >Back</a>
   </div>
   <ul>
     <li *ngFor="let ts of tvShows">
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="{{ ts.image_url }}" alt="Movie image">
+          <img class="card-img-top" src="{{ ts.image_url }}" alt="TV show image">
           <div class="card-body">
             <h5 class="card-title">{{ ts.title }}</h5>
             <p class="card-text"><strong>Cast</strong> - {{ts.cast}}</p>
-            <a routerLink="/tv-show/{{ ts.id }}" class="btn btn-primary">View more</a>
+            <a routerLink="/tv-show/{{ ts.id }}" class="button btn">View more</a>
           </div>
         </div>
     </li>
