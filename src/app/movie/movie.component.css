@@ -1,0 +1,17 @@
+li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+}
+
+form {
+    margin-left: 100px;
+}
+
+.moviePage {
+    margin-top: 2%; 
+}
+
+searchBtn {
+   
+}

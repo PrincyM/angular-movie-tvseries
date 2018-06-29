@@ -1,16 +1,11 @@
-<p>
-  movie-details works!
-</p>
 
-<ul *ngIf='movieDetails'>
-  <li *ngFor='let m of movieDetails'>{{ m.title }}</li>
-</ul>
-
-
-
-<!-- <div *ngIf='movieDetails'> 
-  <div>{{ movieDetails.title }}</div>
-  <div>{{ movieDetails.description }}</div>
-</div> -->
-
-
+<div *ngIf="movieDetails">
+    <div *ngFor="let md of movieDetails">
+      <h3>{{md.title}}</h3>
+      <img src="{{ md.image_url }}" alt="Movie Detail Image">
+      <h5>Directors - {{md.directors}}</h5>
+      <h5>Cast - {{md.cast}}</h5>
+      <h6>Duration: {{ md.duration }}</h6>
+      <small>{{md.description}}</small>
+    </div>
+  </div>
