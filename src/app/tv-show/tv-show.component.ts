@@ -11,8 +11,9 @@ import { Subject } from 'rxjs';
 export class TvShowComponent implements OnInit {
 
   tvShows: Tvshow[];
-  error: string;
+  errorMessage: string;
   showSearch: Tvshow = new Tvshow();
+  isValid = true;
 
   findTvShow() {
     this.tvShowService.getTvShows(this.showSearch).subscribe(ts => this.tvShows = ts);
@@ -23,7 +24,9 @@ export class TvShowComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.tvShowService.getTvShows().subscribe(ts => this.tvShows = ts);
+    this.tvShowService.getTvShows().subscribe(ts => this.tvShows = ts, error => {
+      console.log("error");
+    });
   }
 
 }
