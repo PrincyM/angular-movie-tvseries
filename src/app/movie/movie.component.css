@@ -26,6 +26,10 @@ form {
     height: 15rem;
 }
 
+.errorMessage {
+    color:red;
+}
+
 /* searchBtn {
    
 } */

@@ -13,6 +13,7 @@
   <div *ngIf="(movies); then movieContent else errorContent"></div>
 
   <ng-template #movieContent>
+      <div *ngIf="(movies?.length ==0); then noMovieContent"></div>
     <ul id="movieCard">
         <li *ngFor="let m of movies">
             <div class="card" style="width: 18rem;">
@@ -28,8 +29,15 @@
   </ng-template>
   
   <ng-template #errorContent>
-      <div>
-        <h4>401! Hey you, stop right there. Authorization required. </h4>
+      <div class="errorMessage">
+        <h4>401 error! Hey you, stop right there.</h4>
+        <p>Authorization required.</p>
+      </div>
+  </ng-template>
+
+  <ng-template #noMovieContent>
+      <div class="errorMessage">
+          <h4>Sorry, this movie is not available in our directory!</h4>
       </div>
   </ng-template>
 </div>
