@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { TvShowComponent } from './tv-show/tv-show.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { TvShowDetailComponent } from './tv-show-detail/tv-show-detail.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TvShowDetailComponent } from './tv-show-detail/tv-show-detail.component
     MovieComponent,
     MovieDetailsComponent,
     TvShowComponent,
-    TvShowDetailComponent
+    TvShowDetailComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
