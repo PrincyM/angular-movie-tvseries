@@ -1,4 +1,9 @@
 
-<ul *ngIf="tvShow">
-  <li *ngFor="let t of tvShow">{{t.title}}</li>
-</ul>
+<div *ngIf="tvShow">
+  <div *ngFor="let t of tvShow">
+    <h3>{{t.title}}</h3>
+    <h5>Creators - {{t.creators}}</h5>
+    <h5>Cast - {{t.cast}}</h5>
+    <small>{{t.description}}</small>
+  </div>
+</div>
