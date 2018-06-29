@@ -9,7 +9,11 @@
   <div>
       <a class="back btn" routerLink="" >Back</a>
   </div>
-  <ul id="movieCard">
+
+  <div *ngIf="(movies); then movieContent else errorContent"></div>
+
+  <ng-template #movieContent>
+    <ul id="movieCard">
         <li *ngFor="let m of movies">
             <div class="card" style="width: 18rem;">
               <img class="card-img-top" src="{{m.image_url}}" alt="Movie image">
@@ -21,4 +25,11 @@
             </div>
         </li>
   </ul>
+  </ng-template>
+  
+  <ng-template #errorContent>
+      <div>
+        <h4>Sorry, this movie is not available on our directory!</h4>
+      </div>
+  </ng-template>
 </div>
