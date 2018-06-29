@@ -12,7 +12,7 @@ export class TvshowService {
   apiUrl: string = "http://princymascarenhas.com/tvseriesAPI/seriesAPI.php?api_key=n01258381apikeycall";
 
   private handleError(error: HttpErrorResponse) {
-    return throwError('Something bad happened!');
+    return throwError('Error!');
   }
 
   getTvShow(id: number) : Observable<Tvshow> {

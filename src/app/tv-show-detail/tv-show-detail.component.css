@@ -1,3 +1,9 @@
 .back {
     text-decoration: underline;
 }
+
+.series-image {
+    width: 90%;
+    height: 400px;
+    overflow: hidden;
+}

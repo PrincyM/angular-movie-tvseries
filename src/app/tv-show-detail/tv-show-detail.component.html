@@ -3,6 +3,7 @@
 </div>
 <div *ngIf="tvShow">
   <div *ngFor="let t of tvShow">
+    <img class="series-image" src="{{t.image_url}}" />
     <h3>{{t.title}}</h3>
     <h5>Creators - {{t.creators}}</h5>
     <h5>Cast - {{t.cast}}</h5>

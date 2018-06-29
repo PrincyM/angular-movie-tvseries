@@ -11,6 +11,7 @@ import { Subject } from 'rxjs';
 export class TvShowComponent implements OnInit {
 
   tvShows: Tvshow[];
+  error: string;
   showSearch: Tvshow = new Tvshow();
 
   findTvShow() {

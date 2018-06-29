@@ -24,3 +24,7 @@ form {
 .back {
     text-decoration: underline;
 }
+
+.series-image {
+    height: 170px;
+}

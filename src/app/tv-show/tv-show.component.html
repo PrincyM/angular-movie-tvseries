@@ -3,7 +3,7 @@
       <div class="form-group mx-sm-3 mb-2">
         <input class="form-control" name="search" [(ngModel)]="showSearch.genre" placeholder="Search by genre..">
       </div>
-      <button (click)="findTvShow()" class="button btn mb-2">Search</button>
+      <button (click)="findTvShow()" class="btn btn-outline-danger">Search</button>
     </form>
   <div>
     <div id="error"></div>
@@ -14,7 +14,7 @@
   <ul>
     <li *ngFor="let ts of tvShows">
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="{{ ts.image_url }}" alt="TV show image">
+          <img class="card-img-top series-image" src="{{ ts.image_url }}" alt="TV show image">
           <div class="card-body">
             <h5 class="card-title">{{ ts.title }}</h5>
             <p class="card-text"><strong>Cast</strong> - {{ts.cast}}</p>
