@@ -10,8 +10,22 @@ form {
 
 .moviePage {
     margin-top: 2%; 
+    /* color: black; */
 }
 
-searchBtn {
-   
+#movieCard {
+    color: black;
 }
+
+.card-img-top {
+    width: 18rem;
+    height: 18rem;
+}
+
+.card-body {
+    height: 15rem;
+}
+
+/* searchBtn {
+   
+} */

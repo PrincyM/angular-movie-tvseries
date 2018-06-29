@@ -1,20 +1,24 @@
 <div class="moviePage">
-   <h2>Movie marathon this weekend?</h2>
-   <p>Search for movies you want to watch by movie title below</p>
-   <form>
-      <input name="search" [(ngModel)]="movieSearch.title"/> 
-      <button (click)="findMovies(movieSearch)" class="btn btn-outline-danger searchBtn">Search Movies</button>
-     </form>
-     <ul>
+   <h2 class="text-center">Movie marathon this weekend?</h2>
+   <div class="text-center">
+      <form>
+          <input class="form-control mb-3 align-center" name="search" [(ngModel)]="movieSearch.title" placeholder="Search by Movie Title..."/> 
+      </form>
+      <button (click)="findMovies(movieSearch)" class="btn btn-outline-danger text-center searchBtn" >Search</button>
+   </div>  
+  <div>
+      <a class="back btn" routerLink="" >Back</a>
+  </div>
+  <ul id="movieCard">
         <li *ngFor="let m of movies">
             <div class="card" style="width: 18rem;">
               <img class="card-img-top" src="{{m.image_url}}" alt="Movie image">
               <div class="card-body">
                 <h5 class="card-title">{{ m.title }}</h5>
                 <p class="card-text"><strong>Cast</strong> - {{m.cast}}</p>
-                <a routerLink="/movieDetails/{{ m.id }}" class="btn btn-primary">View More</a>
+                <a routerLink="/movieDetails/{{ m.id }}" class="btn btn-outline-danger">View More</a>
               </div>
             </div>
         </li>
-      </ul>
+  </ul>
 </div>
