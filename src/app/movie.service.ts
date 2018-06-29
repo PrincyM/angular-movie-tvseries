@@ -11,10 +11,6 @@ export class MovieService {
 
   /// movie API endpoint
   apiUrl: string =  'http://princymascarenhas.com/emreji-angular/movieAPI.php?api_key=n01258381apikeycall';
-  // apiUrl: string = 'http://princymascarenhas.com/angular/exampleApi.php';
-  // apiUrl: string = 'http://localhost:8888/TrendsWebDev/webTrends/PlanetsAPI/exampleApi.php';
-  // apiUrl: string = 'http://princymascarenhas.com/tvseriesAPI/seriesAPI.php';
-
 
   // error handler
   private handleError(error: HttpErrorResponse) {
@@ -31,18 +27,14 @@ export class MovieService {
     }
 
    return this.http.get<Movie[]>(this.apiUrl).pipe(catchError(this.handleError));  // enter URL of API endpoint and return the movie array
-  //  + '?api_key=n01258381'
+  
    }
 
    getMovieById(id): Observable<Movie> { // getMovieById is expecting a single movie by id
 
    return this.http.get<Movie>(this.apiUrl + "&id=" + id).pipe(catchError(this.handleError));  // enter URL of API endpoint and return the movie array
-  //  + '?api_key=n01258381&id='
+ 
    }
-
-  //  getMovieByTitle(title): Observable<Movie[]> {
-     
-  //  }
 
   constructor(
     private http: HttpClient // creating an instace of HTTP client in constructor
