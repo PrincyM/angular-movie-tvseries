@@ -5,22 +5,36 @@
       </div>
       <button (click)="findTvShow()" class="btn btn-outline-danger">Search</button>
     </form>
-  <div>
-    <div id="error"></div>
-  </div>
+
   <div>
       <a class="back btn mb-2" routerLink="" >Back</a>
   </div>
-  <ul>
-    <li *ngFor="let ts of tvShows">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top series-image" src="{{ ts.image_url }}" alt="TV show image">
-          <div class="card-body">
-            <h5 class="card-title">{{ ts.title }}</h5>
-            <p class="card-text"><strong>Cast</strong> - {{ts.cast}}</p>
-            <a routerLink="/tv-show/{{ ts.id }}" class="button btn">View more</a>
-          </div>
-        </div>
-    </li>
-  </ul>
+
+  <div *ngIf="(tvShows);then content else otherContent"></div>   
+  
+  <ng-template #content>
+      <div *ngIf="(tvShows?.length == 0);then noContent"></div>    
+      <ul>
+          <li *ngFor="let ts of tvShows">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top series-image" src="{{ ts.image_url }}" alt="TV show image">
+                <div class="card-body">
+                  <h5 class="card-title">{{ ts.title }}</h5>
+                  <p class="card-text truncate"><strong>Cast</strong> - {{ts.cast}}</p>
+                  <a routerLink="/tv-show/{{ ts.id }}" class="button btn">View more</a>
+                </div>
+              </div>
+          </li>
+        </ul>
+  </ng-template>
+  <ng-template #otherContent>
+      <div class="errorMessage">
+        Sorry. Something went wrong!
+      </div>
+  </ng-template>
+  <ng-template #noContent>
+      <div class="errorMessage">
+        Sorry. We don't have the genre you are looking for!
+      </div>
+  </ng-template>
 </div>
