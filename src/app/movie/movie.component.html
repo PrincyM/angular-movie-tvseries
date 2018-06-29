@@ -2,6 +2,11 @@
   movie works!
 </p>
 
+<div class="moviePage">
+   <h1>Movies</h1>
+   <h4>Movie marathon this weekend?</h4>
+</div>
+
 <div>
     <ul *ngIf='movies'>
         <li *ngFor='let m of movies' id="{{ m.id }}"><a routerLink="/movieDetails/{{ m.id }}">{{ m.title }}</a></li> 

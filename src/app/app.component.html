@@ -1,4 +1,24 @@
-<a routerLink="tv-shows">TV Shows</a>
-<a routerLink="movies">All Movies</a>
+<div class="container">
+    <div class="row">
+          <div class="col-md-12">
+            <div id="logo">
+              <img width="300" alt="MediaAddict Logo" src="/assets/images/logo.png">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+    <div class="col-md-12">
+        <nav>
+         <!-- Elizabeth Reji -->
+           <a routerLink="tv-shows">TV Shows</a>
+        <!-- Princy Mascarenhas -->
+           <a routerLink="movies">Movies</a>
+        </nav>
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+<!-- <a routerLink="tv-shows">TV Shows</a>
+<a routerLink="movies">All Movies</a> -->
 <router-outlet></router-outlet>
 
